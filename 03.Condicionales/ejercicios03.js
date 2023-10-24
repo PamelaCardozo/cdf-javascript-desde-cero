@@ -16,19 +16,35 @@ function salario(personal, exp){
     // mayor o igual a 20 años, el bono es de $15.000. tendrás que retornar un mensaje con el nombre del personal y el bono correspondiente
     // Ejemplo: "Pedro tu bono es de $10.000"
     // Tu código:👇
+    if (exp >= 20){
+        return personal + " tu bono es de $15.000";
+    } else if (exp > 5 && exp < 20){
+        return personal + " tu bono es de $10.000";
+    } else if (exp <= 5){
+        return personal + " tu bono es de $5.000";
+    }
+
     
 }
 
 function numPar(num){
     // Retorna true si 'num' es un numero par, casi contrario retorna false
     // Tu código:👇
-
+    if (num % 2 === 0){
+        return true
+    }else {
+        return false
+    }
 }
 
 function numImpar(num){
     // Retorna true si 'num' es un numero impar, casi contrario retorna false
     // Tu código:👇
-
+    if (num % 2 === 1){
+        return true
+    }else {
+        return false
+    }
 }
 
 function numPositivoNegativo(num){
@@ -36,7 +52,11 @@ function numPositivoNegativo(num){
     // Positivos -> "El numero es positivo"
     // Negativo -> "El numero es negativo"
     // Tu código:👇
-
+    if (num >= 0){
+        return "El numero es positivo";
+    } else if (num < 0){
+        return "El numero es negativo";
+    }
 }
 
 function cambioPesos(monto, pago){

@@ -37,37 +37,41 @@ function porcentajeX(chicos, chicas){
 function elevadoAlCubo(num){
     //'num' es un numero entero. Eleva este numero al cubo y devuelve su valor
     //Tu código 👇:
-    return Math.pow(num,2);
+    return Math.pow(num,3);
+
 }
 
 function roundUp(num){
     //Redondea hacia arriba el numero pasado por parámetros 'num', y devuelve su valor
     //Tu código 👇:
-    return Math.round(num);
+    return Math.ceil(num);
 }
 
 function randomNumber(){
     //Devuelve un numero random
     //Tu código 👇:
-
+    return Math.random();
 }
 
 function igualQue(num1, num2){
     //comprueba que num1 y num2 sean iguales y retorna
     //en caso que no sean iguales retornará false, caso contrario retornará true
     //Tu código 👇: 
+    return num1 === num2;
 }
 
 function menorQue(num1, num2){
     //comprueba que num1 sea menor que num2  y retorna
     //en caso que no sea menor retornará false, caso contrario retornará true
-    //Tu código 👇: 
+    //Tu código 👇:
+    return num1 < num2;
 }
 
 function equalLength(string1, string2){
      //comprueba si string1 tiene la misma longitud que string2 y retorna
     //en caso que no sean iguales retornará false, caso contrario retornará true
     //Tu código 👇:
+    return string1.length === string2.length
 }
 
 
