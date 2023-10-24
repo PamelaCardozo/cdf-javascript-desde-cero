@@ -3,25 +3,25 @@
 function suma(x, y){
     // X e Y  ambos son números, haz que esta función retorne el resultado de la suma de ambos
     // Tu código 👇:
-
+    return x + y;
 }
 
 function resta(x, y){
     // X e Y  ambos son números, haz que esta función retorne el resultado de la resta de ambos
     // Tu código 👇:
-
+    return x - y;
 }
 
 function multiplicacion(x, y){
     // haz que esta función retorne el resultado de la multiplicación entre 'X' e 'Y'
     // Tu código 👇:
-
+    return x * y;
 }
 
 function resto(x, y){
     // X e Y  ambos son números, haz que esta función retorne el resto de 'X' e 'Y'
     // Tu código 👇:
-
+    return x % y;
 }
 
 function porcentajeX(chicos, chicas){
@@ -30,19 +30,20 @@ function porcentajeX(chicos, chicas){
     //puedes hacer una regla de 3 simple.
     // Deberás devolver el porcentaje de chicas que hay en el curso.
     //Tu código 👇:
+    return (chicas * 100)/ (chicos + chicas);
 
 }
 
 function elevadoAlCubo(num){
     //'num' es un numero entero. Eleva este numero al cubo y devuelve su valor
     //Tu código 👇:
-     
+    return Math.pow(num,2);
 }
 
 function roundUp(num){
     //Redondea hacia arriba el numero pasado por parámetros 'num', y devuelve su valor
     //Tu código 👇:
-
+    return Math.round(num);
 }
 
 function randomNumber(){
