@@ -43,7 +43,7 @@ function primerasCondicionales(arg){
         return 'Este array es mayor a 3';
     } else if (arg.length === 3 ){
         return 'Este array es igual a 3';
-    } else if (arg.length < 3){
+    } else if (arg.length < 3 && arg.length > 0){
         return 'Este array es menor a 3';
     } else if (arg.length === 0){
         return 'Este array no contiene elementos';
@@ -106,22 +106,21 @@ function eliminarDuplicado(arr){
     // Se para un array de enteros, tienes que iterar por los elementos y eliminar los duplicados, y devolver el array nuevo sin duplicado.
     // ejemplo: [1,1,2,4,5,6,6,7,1,8,9] -> [1,2,4,5,6,7,8,9]
     // Tu codigo:
-    const resultado= [];
-
-    for (let i= 0; i < arr.length; i++){
-        if (resultado.indexOf(arr[i] === -1)){
-            resultado.push(arr[i])
-        }
-    }
-    return resultado
+    return arr.filter((elemento, indice, array) => array.indexOf(elemento) === indice);
 }
 
 function enOrden(arr, ascendente = true){
     //Se para un array de enteros de forma desordenada, tendras que devolver el mismo array pero de forma ordenada
     //de menor a mayor. ejemplo -> [7, 2, 4, 6, 1, 3, 5] -> [1, 2, 3, 4, 5, 6, 7]
     //Tu codigo:
-
+    arr.sort(function(a,b){
+        if (ascendente){
+            return a - b;
+        } else { return b - a}
+    })
+    return arr
 }
+
 
 function dosEnUno(arr1, arr2){
     //Escribe una función que reciba dos arrays y devuelva un nuevo array que contenga todos los elementos de ambos arrays, sin duplicados.
