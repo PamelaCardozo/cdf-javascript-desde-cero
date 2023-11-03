@@ -29,11 +29,11 @@ function encuentraX(x){
 //Realiza un algoritmo que recorre numeros del 1 al 100, cuando pase por el numero X pasado por parametros
 // retornar "El numero X es: ..."
 // Tu Código:👇
-for (let i = 1; i <= 100; i++) {
-    if (i === x) {
-      return "El número X es: " + i;
-    }
-  }
+// for (let i = 1; i <= 100; i++) {
+//     if (i === x) {
+//       return "El número X es: " + i;
+//     }
+//   }
 }
 
 function sumandoTodo(num){
