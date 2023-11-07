@@ -82,7 +82,7 @@ function permisosDeEntrada(personas) {
 //tu codigo:
 
 let libro = {
-    título:'título',
+    título:'Título',
     autor:'Autor del Libro',
     añoPublicación:'añoPublicación',
 };
