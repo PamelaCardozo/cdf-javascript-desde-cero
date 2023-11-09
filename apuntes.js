@@ -4,6 +4,8 @@ function nombre_de_la_fcion(con la cantidad de parametros q necesite, o ninguno)
     lo que necesito que me devuelva la funcion
 }
 
+
+
 function() ---> es la manera correcta de llamarla
 
 /** * me ayuda a comentar una funcion
