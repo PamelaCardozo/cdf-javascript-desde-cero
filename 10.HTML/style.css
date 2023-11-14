@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-color: black;
+    color: azure;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blueviolet;
+    color:chartreuse;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+#logo{
+    width: 60px;
+}
+
