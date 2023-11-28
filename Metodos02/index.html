@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Metodos Ejercicios 02</title>
+</head>
+<body>
+    <header>
+            <h1>Escuela de programacion</h1>
+    </header>
+    <main>
+        <section>
+            <h1 id="title">Alumnos Escuela de Programacion</h1>
+            <div class ="tableAlumnos">
+                <div class="table">
+                    <table class="demo">
+                        <caption>Alumnos</caption>
+                        <thead>
+                        <tr id="header-table">
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th id="thrid-column">...</th>
+                        </tr>
+                        </thead>
+                        <tbody id="bodyAlumnos">
+                        <!-- <tr>
+                            <td>Leonardo</td>
+                            <td>Avila</td>
+                            <td>111111111</td>
+                        </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="buttons">
+                    <button onclick="btnDate()">Datos Alumnos</button>
+                    <button onclick="btnPromedios()">Promedios</button>
+                    <button onclick="btnAsistencia()">Asistencias</button>
+                    <button onclick="btnAprobados()">Aprobados</button>
+                    <button onclick="btnReprobados()">Reprobados</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1 id="title">Peliculas</h1>
+            <div class ="peliculas">
+                <div class="peli">
+
+                </div>
+                <div id="buttons">
+                    <button onclick="allFilms()">Todos</button>
+                    <button onclick="estrenos()">Estrenos</button>
+                    <button onclick="accion()">Accíon</button>
+                    <button onclick="drama()">Drama</button>
+                    <button onclick="crimen()">Crimen</button>
+                    <button onclick="otros()">Otros</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./src/alumnos.js"></script>
+<script src="./src/peliculas.js"></script>
+</html>
