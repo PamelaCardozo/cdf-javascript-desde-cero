@@ -21,30 +21,83 @@ const pelis = document.querySelector('.peli') // Obtenemos sección de pelis. do
 
 //BOTON TODOS => Debe devolver todas las portadas (img) de las peliculas que hay.
 const allFilms = () => {
+    pelis.innerHTML = ""; 
 
+    peliculas.forEach(pelicula => {
+        pelis.innerHTML += `
+            <img src="${pelicula.img}" alt="${pelicula.titulo}" class="film-cover">
+        `;
+    });
+          
 }
 
 //BOTON ESTRENOS => Debe devolver las portadas (img) solo de las peliculas que esten en estreno 'estreno: true'
 const estrenos = () => {
+    pelis.innerHTML = ""
+    const peliculasEstreno = peliculas.filter(pelicula => pelicula.estreno );
+
+    peliculasEstreno.forEach(pelicula =>{
+        pelis.innerHTML += `
+        <img src="${pelicula.img}" alt="${pelicula.titulo}" class="film-cover">
+       `    
+     })
+
 
 }
 
 //BOTON ACCION => Debe devolver solo aquellas peliculas que contengan como genero ‘Acción’.
 const accion = () => {
+    pelis.innerHTML = ""
+    const peliculasAccion = peliculas.filter(pelicula => pelicula.genero === "Acción");
+
+    peliculasAccion.forEach(pelicula =>{
+        pelis.innerHTML += `
+        <img src="${pelicula.img}" alt="${pelicula.titulo}" class="film-cover">
+       `    
+     })
+
 
 }
 
 //BOTON DRAMA => Debe devolver solo aquellas peliculas que contengan como genero ‘Drama’.
 const drama = () => {
+    pelis.innerHTML = ""
+    const peliculasDrama = peliculas.filter(pelicula => pelicula.genero === "Drama");
+
+    peliculasDrama.forEach(pelicula =>{
+        pelis.innerHTML += `
+        <img src="${pelicula.img}" alt="${pelicula.titulo}" class="film-cover">
+       `    
+     })
+
 
 }
 
 //BOTON CRIMEN => Debe devolver solo aquellas peliculas que contengan como genero ‘Crimen’.
 const crimen = () => {
+    pelis.innerHTML = ""
+    const peliculasCrimen = peliculas.filter(pelicula => pelicula.genero === "Crimen");
+
+    peliculasCrimen.forEach(pelicula =>{
+        pelis.innerHTML += `
+        <img src="${pelicula.img}" alt="${pelicula.titulo}" class="film-cover">
+       `    
+     })
+
 
 }
 
 //BOTON TODOS => debe devolver aquellas peliculas que NO estén dentro de los generos anteriores.
 const otros = () => {
+    pelis.innerHTML = ""
+    const generosFiltrados = ["Drama", "Crimen", "Acción"]
+    
+    for (const pelicula of peliculas) {
+        if (!generosFiltrados.includes(pelicula.genero)) {
+            pelis.innerHTML += `
+                <img src="${pelicula.img}" alt="${pelicula.titulo}" class="film-cover">
+            `;
+        }
+    }
 
 }

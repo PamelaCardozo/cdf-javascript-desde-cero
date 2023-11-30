@@ -92,22 +92,62 @@ const btnAsistencia = () => {
 // BOTON APROBADOS => - Deberia devolver la tabla de alumnos en ella solo aquellos que tengan aprobado el cursado, en base a las siguientes condiciones:
 // Un promedio ≥ 70 y un porcentaje de asistencia ≥ 70
 const btnAprobados = () => {
-    deleteColumn()
-    bodyTableAlumnos.innerHTML = " "
+    deleteColumn();
+    bodyTableAlumnos.innerHTML = "";
+    headerTable.innerHTML += '<th id="delete">%</th>';
+
     alumnos.forEach(alumnos => {
-        bodyTableAlumnos.innerHTML += `
+        const promedio = Math.ceil((alumnos.examen1 + alumnos.examen2 + alumnos.examen3) / 3);
+        const porcentajeAsistencia = Math.ceil((alumnos.asistencias / 24) * 100);
+
+        if (promedio >= 70 && porcentajeAsistencia >= 70) {
+            bodyTableAlumnos.innerHTML += `
+                <tr>
+                    <td>${alumnos.nombre}</td>
+                    <td>${alumnos.apellido}</td>
+                    <td>${promedio}</td>
+                    <td>${alumnos.asistencias}/24</td>
+                    <td>${porcentajeAsistencia}</td>
+                </tr>
+            `;
+        }
+    });
+
+    addColumn = true;
+    document.querySelector('#thrid-column').innerText = "Aprobados";
+
         
-        `
-       
-        })
-    
 }
 
 
 // Deberia devolver la tabla de alumnos con aquellos que no aprobaron el cursado.
 const btnReprobados = () => {
+    deleteColumn();
+    bodyTableAlumnos.innerHTML = "";
+    headerTable.innerHTML += '<th id="delete">%</th>';
 
-}
+    alumnos.forEach(alumnos => {
+        const promedio = Math.ceil((alumnos.examen1 + alumnos.examen2 + alumnos.examen3) / 3);
+        const porcentajeAsistencia = Math.ceil((alumnos.asistencias / 24) * 100);
+
+        if (promedio < 70 || porcentajeAsistencia < 70) {
+            bodyTableAlumnos.innerHTML += `
+                <tr>
+                    <td>${alumnos.nombre}</td>
+                    <td>${alumnos.apellido}</td>
+                    <td>${promedio}</td>
+                    <td>${alumnos.asistencias}/24</td>
+                    <td>${porcentajeAsistencia}</td>
+                </tr>
+            `;
+        }
+    });
+
+    addColumn = true;
+    document.querySelector('#thrid-column').innerText = "No Aprobados";
+}    
+
+
 
 
 // AYUDA => esta función te ayudará a eliminar la columna extra que tienes que agregar en 'BOTON ASISTENCIAS'. 
